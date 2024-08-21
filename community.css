@@ -1,0 +1,46 @@
+body{
+ background-color:lightblue;
+}
+
+h1{
+color:red;
+text-align:center;
+}
+li{
+color:blue;
+}
+ 
+h2{
+color:blueviolet;
+}
+
+ol li{
+color:blue;
+}
+
+h3{
+colour:cadetblue;
+}
+
+p{
+color:blue;
+}
+
+li a{
+color:red;
+}
+
+tr td{
+	color:black;
+}
+.watermark {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0.2;
+	pointer-events: none;
+	width:1400px;
+	height:2000px;
+  }
+  

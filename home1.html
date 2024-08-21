@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .container {
+      display: grid;
+      grid-template-rows: 25% 75%;
+      height: 100%;
+    }
+    .row1 {
+      background-color: grey;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .row2 {
+      display: grid;
+      grid-template-columns: 20% 80%;
+    }
+    .column1 {
+      background-color: aquamarine;
+      padding: 5px;
+    }
+    .column2 {
+      padding: 0px;
+      position: relative;
+    }
+    .frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    #frame2 {
+      width: 100%;
+      height: 610px;
+    }
+    .watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 20.1;
+      pointer-events: none;
+      width: 1200px;
+      height: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row1">
+      <h1 style="color: white; font-size: 40px;">Chemicals in Food Influence Quality of Life</h1>
+    </div>
+    <div class="row2">
+      <div class="column1">
+        <nav>
+          <ul>
+            <li><a href="#" onclick="loadPage('introduction.html')">INTRODUCTION</a></li>
+            <li><a href="#" onclick="loadPage('foodchemicaldetection.html')">FOOD CHEMICAL DETECTION</a></li>
+            <li><a href="#" onclick="loadPage('strategies.html')">STRATEGIES</a></li>
+            <li><a href="#" onclick="loadPage('healtheffects.html')">HEALTH EFFECTS</a></li>
+            <li><a href="#" onclick="loadPage('chemicalcomponentsinfood.html')">cHEMICALCOMPONENTSINFOOD</a></li>
+
+          </ul>
+        </nav>
+      </div>
+      <div class="column2">
+        <script>
+          function loadPage(pageName) {
+            var frame = document.getElementById("frame2");
+            var watermark = document.querySelector(".watermark");
+            frame.src = pageName;
+            watermark.style.display = "none"; // Hide watermark image
+          }
+        </script>
+        <div class="frame-container">
+            <img src="C:\Users\prasa\OneDrive\Desktop\picture14.jpeg" alt="Watermark Image" class="watermark">
+          <iframe src="" name="frame2" id="frame2" class="frame"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
